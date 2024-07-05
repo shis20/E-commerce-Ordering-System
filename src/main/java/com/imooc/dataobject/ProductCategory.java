@@ -8,9 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * 类目
- * Created by 廖师兄
- * 2017-05-07 14:30
+ * shuting shi
+ * 2024/07/05
  */
 @Entity
 @DynamicUpdate

@@ -7,9 +7,8 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 /**
- * 商品
- * Created by 廖师兄
- * 2017-05-09 17:27
+ * shuting shi
+ * 2024/07/05
  */
 public interface ProductService {
 

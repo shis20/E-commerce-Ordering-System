@@ -3,9 +3,8 @@ package com.imooc.enums;
 import lombok.Getter;
 
 /**
- * 商品状态
- * Created by 廖师兄
- * 2017-05-09 17:33
+ * shuting shi
+ * 2024/07/05
  */
 @Getter
 public enum ProductStatusEnum {
