@@ -7,9 +7,8 @@ import javax.persistence.Id;
 import java.math.BigDecimal;
 
 /**
- * 商品
- * Created by 廖师兄
- * 2017-05-09 11:30
+ * shuting shi
+ * 2024/07/05
  */
 @Entity
 @Data

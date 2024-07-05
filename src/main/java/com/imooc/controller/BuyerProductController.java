@@ -17,11 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
 /**
- * 买家商品
- * Created by 廖师兄
- * 2017-05-12 14:08
+ * shuting shi
+ * 2024/07/05
  */
 @RestController
 @RequestMapping("/buyer/product")
