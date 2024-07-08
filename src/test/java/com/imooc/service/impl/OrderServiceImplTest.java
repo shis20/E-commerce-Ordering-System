@@ -2,6 +2,8 @@ package com.imooc.service.impl;
 
 import com.imooc.dataobject.OrderDetail;
 import com.imooc.dto.OrderDTO;
+import com.imooc.enums.OrderStatusEnum;
+import com.imooc.enums.PayStatusEnum;
 import junit.framework.TestCase;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -24,6 +26,8 @@ public class OrderServiceImplTest extends TestCase {
 
     private final String BUYER_OPENID = "110110";
 
+    private final String ORDER_ID = "123456";
+
     @Test
     public void create() throws Exception {
         OrderDTO orderDTO = new OrderDTO();
@@ -42,11 +46,39 @@ public class OrderServiceImplTest extends TestCase {
         Assert.assertNotNull(result);
     }
 
+    @Test
+    public void findOne() throws Exception {
+        OrderDTO result = orderService.findOne(ORDER_ID);
+        log.info("查询单个订单 result = {}", result);
+        Assert.assertEquals(ORDER_ID, result.getOrderId());
+    }
+
+    @Test
+    public void cancel() throws Exception {
+        OrderDTO orderDTO = orderService.findOne(ORDER_ID);
+        OrderDTO result = orderService.cancel(orderDTO);
+        Assert.assertEquals(OrderStatusEnum.CANCEL.getCode(), result.getOrderStatus());
+    }
+
+    @Test
+    public void finish() throws Exception {
+        OrderDTO orderDTO = orderService.findOne(ORDER_ID);
+        OrderDTO result = orderService.cancel(orderDTO);
+        Assert.assertEquals(OrderStatusEnum.FINISHED.getCode(), result.getOrderStatus());
+    }
+
+
+    @Test
+    public void paid() throws Exception {
+        OrderDTO orderDTO = orderService.findOne(ORDER_ID);
+        OrderDTO result = orderService.paid(orderDTO);
+        Assert.assertEquals(PayStatusEnum.SUCCESS.getCode(), result.getPayStatus());
+    }
+
+
     public void testCreate() {
     }
 
-    public void testFindOne() {
-    }
 
     public void testFindList() {
     }
