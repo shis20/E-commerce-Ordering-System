@@ -18,3 +18,10 @@ server:
 #  level:
 #    com.imooc.LoggerTest: debug
 
+wechat:
+  mpAppId: wxd3748593n2n
+  mpAppSecret: 2957snci48829sxdn22349jsw
+  mchId: 23456256542
+  mchKey: 8573hsmxkw6395kaanxue243
+  ketPath: /var/weixin_cert/h5.p12
+  notifyUrl: http://sell.natapp4.cc/sell/pay/notify
