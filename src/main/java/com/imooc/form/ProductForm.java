@@ -1,30 +1,31 @@
-package com.imooc.dataobject;
+package com.imooc.form;
 
-import com.imooc.enums.ProductStatusEnum;
 import lombok.Data;
-import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * shuting shi
- * 2024/07/05
+ * @Description: TODO
+ * @author: Shuting Shi
+ * @date: 2024年07月11日 6:57 a.m.
  */
-@Entity
-@DynamicUpdate
-@Data
-public class ProductInfo {
 
-    @Id
+@Data
+public class ProductForm {
+
     private String productId;
 
-    /** 名字. */
+
+    /**
+     * 名字.
+     */
     private String productName;
 
-    /** 单价. */
+    /**
+     * 单价.
+     */
     private BigDecimal productPrice;
 
     /**
@@ -45,7 +46,7 @@ public class ProductInfo {
     /**
      * 状态, 0正常1下架.
      */
-    private Integer productStatus = ProductStatusEnum.UP.getCode();
+    private Integer productStatus;
 
     private Enum productStatusEnum;
 
@@ -57,5 +58,4 @@ public class ProductInfo {
     private Date createTime;
 
     private Date updateTime;
-
 }

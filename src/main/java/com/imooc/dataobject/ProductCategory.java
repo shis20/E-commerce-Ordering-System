@@ -6,6 +6,7 @@ import org.hibernate.annotations.DynamicUpdate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
 
 /**
  * shuting shi
@@ -16,15 +17,25 @@ import javax.persistence.Id;
 @Data
 public class ProductCategory {
 
-    /** 类目id. */
+    /**
+     * 类目id.
+     */
     @Id
     @GeneratedValue
     private Integer categoryId;
 
-    /** 类目名字. */
+    /**
+     * 类目名字.
+     */
     private String categoryName;
 
-    /** 类目编号. */
+    private Date createTime;
+
+    private Date updateTime;
+
+    /**
+     * 类目编号.
+     */
     private Integer categoryType;
 
     public ProductCategory() {
